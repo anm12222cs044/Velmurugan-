@@ -12,13 +12,13 @@ function searchWeather() {
             }
 
             document.getElementById("cityName").textContent = data.name;
-            document.getElementById("temperature").textContent = `Temperature: ${data.main.temp}°C`;
+            document.getElementById("temperature").textContent = `Temperature: ${data.main.temp}Â°C`;
             document.getElementById("description").textContent = `Weather: ${data.weather[0].description}`;
             document.getElementById("humidity").textContent = `Humidity: ${data.main.humidity}%`;
             document.getElementById("wind").textContent = `Wind Speed: ${data.wind.speed} m/s`;
 
             // Updating icons section
-            document.getElementById("tempValue").textContent = `${data.main.temp}°C`;
+            document.getElementById("tempValue").textContent = `${data.main.temp}Â°C`;
             document.getElementById("humidityValue").textContent = `${data.main.humidity}%`;
         })
         .catch(error => {
