@@ -1,3 +1,4 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,82 +6,68 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Animated Background */
 body {
-    min-height: 100vh;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0, #ff0080);
     background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    animation: rainbowBG 6s infinite alternate;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    height: 100vh;
 }
 
-@keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
+/* Glass Container */
 .container {
-    width: 100%;
-    max-width: 400px; /* Set a max width for the container */
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    text-align: center; /* Center text inside the container */
+    width: 320px;
+    text-align: center;
+    color: white;
 }
 
+/* Title */
 h1 {
-    color: #fff;
-    margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-input[type="text"] {
-    width: 100%; /* Full width input */
+/* Search Bar */
+input {
+    width: 80%;
     padding: 10px;
     border: none;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    font-size: 16px;
-    margin-bottom: 10px; /* Space between input and button */
-    transition: background 0.3s ease;
-}
-
-input[type="text"]:focus {
+    border-radius: 5px;
     outline: none;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    text-align: center;
 }
 
 button {
-    width: 100%; /* Full width button */
+    background: rgba(255, 255, 255, 0.7);
+    color: black;
     padding: 10px;
     border: none;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: 0.3s;
 }
 
 button:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: white;
+    transform: scale(1.1);
 }
 
-.weather-info {
-    color: #fff;
-    margin-top: 20px; /* Space above weather info */
-}
-
-.weather-info p {
-    margin: 5px 0; /* Space between paragraphs */
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
+/* Gradient Animation */
+@keyframes rainbowBG {
+    from {
+        background-position: 0% 50%;
     }
+    to {
+        background-position: 100% 50%;
     }
+}
