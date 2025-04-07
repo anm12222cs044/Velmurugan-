@@ -1,5 +1,5 @@
 // OpenWeatherMap API Key (Replace with your own)
-const API_KEY = "bd5e378503939ddaee76f12ad7a97608";
+const API_KEY = "d92fcc34c4b01f6c3c4cbd9705969e10";
 
 // Function to get weather data
 async function getWeather() {
